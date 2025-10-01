@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const API = "http://localhost:3000/students";
+const API = "http://localhost:3000/customers";
 
 export default function StudentForm({ fetchStudents }) {
   const { id } = useParams();

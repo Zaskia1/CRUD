@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 import StudentList from "./components/StudentList";
 import StudentForm from "./components/StudentForm";
 
-const API = "http://localhost:3000/students";
+const API = "http://localhost:3000/customers"; 
 
 export default function App() {
   const [students, setStudents] = useState([]);
