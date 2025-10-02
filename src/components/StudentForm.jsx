@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const API = "http://localhost:3000/customers";
+const API = "https://api-production-34b2.up.railway.app/customers";
 
 export default function StudentForm({ fetchStudents }) {
   const { id } = useParams();
@@ -9,7 +9,7 @@ export default function StudentForm({ fetchStudents }) {
 
   const [form, setForm] = useState({
     name: "",
-    gender: "",
+    phone: "",
     email: "",
     address: "",
   });
@@ -45,7 +45,7 @@ export default function StudentForm({ fetchStudents }) {
 
   const labels = {
     name: "Nama",
-    gender: "Gender",
+    phone: "Nomor HP",
     email: "Email",
     address: "Alamat",
   };
@@ -71,21 +71,18 @@ export default function StudentForm({ fetchStudents }) {
           />
         </div>
 
-        {/* Gender */}
+        {/* Phone */}
         <div>
           <label className="block mb-1 font-medium text-gray-700">
-            {labels.gender}
+            {labels.phone}
           </label>
-          <select
+          <input
+            type="text"
             className="w-full border px-3 py-2 rounded-lg focus:ring-2 focus:ring-purple-500"
-            value={form.gender}
-            onChange={(e) => setForm({ ...form, gender: e.target.value })}
+            value={form.phone}
+            onChange={(e) => setForm({ ...form, phone: e.target.value })}
             required
-          >
-            <option value="">-- Pilih Gender --</option>
-            <option value="Perempuan">Perempuan</option>
-            <option value="Laki-laki">Laki-laki</option>
-          </select>
+          />
         </div>
 
         {/* Email */}

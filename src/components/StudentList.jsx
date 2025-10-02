@@ -30,7 +30,7 @@ export default function StudentList({ students, deleteStudent }) {
                 <th className="p-3 border-b">Nama</th>
                 <th className="p-3 border-b">Address</th>
                 <th className="p-3 border-b">Email</th>
-                <th className="p-3 border-b">Gender</th>
+                <th className="p-3 border-b">Phone</th> {/* ubah Gender jadi Phone */}
                 <th className="p-3 border-b text-center">Action</th>
               </tr>
             </thead>
@@ -44,7 +44,7 @@ export default function StudentList({ students, deleteStudent }) {
                   <td className="p-3">{s.name}</td>
                   <td className="p-3">{s.address}</td>
                   <td className="p-3">{s.email}</td>
-                  <td className="p-3">{s.gender}</td>
+                  <td className="p-3">{s.phone}</td> {/* tampilkan Phone */}
                   <td className="p-3 text-center flex justify-center gap-3">
                     <button
                       onClick={() => navigate(`/edit/${s.id}`)}
